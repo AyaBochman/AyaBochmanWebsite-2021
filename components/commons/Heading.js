@@ -18,5 +18,5 @@ const StyledHeading = styled.div`
     text-align: center;
     margin: 0 auto;
     font-weight: 300;
-    color: #D947BC;
+    color: var(--gradient-1);
 `;

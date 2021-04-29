@@ -21,7 +21,7 @@ font-weight: 100;
 height: auto;
 font-size: 40px;
 width: 100%;
-background: linear-gradient(0deg, rgba(88,55,160,1) 20%, rgba(217,71,188,1) 70%);
+background: linear-gradient(0deg, var(--gradient-2) 20%, var(--gradient-1)  70%);
 .im-aya{
     /* font-size: 30px; */
     font-weight: 500;
