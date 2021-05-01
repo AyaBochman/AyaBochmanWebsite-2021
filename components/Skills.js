@@ -2,11 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 import Heading from './commons/Heading';
 import SkillBar from './commons/SkillBar';
-// import formatDistance from 'date-fns/formatDistance';
-// import formatDistanceStrict from 'date-fns/formatDistanceStrict';
-import formatDuration from 'date-fns/formatDuration'
-import { parseISO, formatDistanceToNow } from 'date-fns'
-import { formatDistance } from 'date-fns/esm'
+import formatDistance from 'date-fns/formatDistance';
+import formatDistanceStrict from 'date-fns/formatDistanceStrict';
 
 const skills = [
     {
@@ -38,18 +35,14 @@ const skills = [
 const Skills = () => {
 
     const calculateExp = () => {
-
-        // const diff = formatDistanceStrict(new Date(2019, 9, 1), new Date());
-        // let timestamp = ;
-        // const date = parseISO(timestamp)
-        const timePeriod = formatDistanceToNow(new Date(2019, 9, 1))
-        console.log('hi', timePeriod);
+        const args = [new Date(2019, 1, 9), new Date()];
+        return formatDistance(...args);
     };
 
     return (
         <StyledSkills>
             <Heading text={'skills'} />
-            <span>Exp: {calculateExp()}</span>
+            <span className={'exp'}>🌟 <code>calcExp() = {calculateExp()}</code>  </span>
             <div className={'skills-container'}>
                 {skills && skills.map((skill, i) => {
                     return <SkillBar key={i} skill={skill} />
@@ -67,6 +60,11 @@ const StyledSkills = styled.div`
 display: flex;
 flex-direction: column;
 justify-content: center;
+.exp{
+    margin: 0 auto 20px auto;
+    font-size: 16px;
+    color: var(--gradient-2);
+}
 .skills-container{
     width: 250px;
     /* margin: 0 auto; */
