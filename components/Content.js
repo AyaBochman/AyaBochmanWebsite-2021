@@ -18,6 +18,6 @@ const StyledContent = styled.div`
 display: flex;
 flex-direction: column;
 justify-content: center;
-padding: 15px 25px;
+padding: 15px 49px;
 color: var(--light-text);
 `;
