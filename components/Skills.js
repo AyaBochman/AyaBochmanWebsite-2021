@@ -42,7 +42,7 @@ const Skills = () => {
     return (
         <StyledSkills>
             <Heading text={'skills'} />
-            <span className={'exp'}>🌟 <code>calcExp() = {calculateExp()}</code>  </span>
+            <span className={'exp'}><code>let myExp = {calculateExp()}</code>  </span>
             <div className={'skills-container'}>
                 {skills && skills.map((skill, i) => {
                     return <SkillBar key={i} skill={skill} />
@@ -60,6 +60,7 @@ const StyledSkills = styled.div`
 display: flex;
 flex-direction: column;
 justify-content: center;
+padding: 0 49px 45px 49px;
 .exp{
     margin: 0 auto 20px auto;
     font-size: 16px;

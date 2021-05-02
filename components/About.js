@@ -33,6 +33,7 @@ const StyledAbout = styled.div`
 display: flex;
 justify-content: center;
 flex-direction: column;
+padding: 15px 49px;
 .location{
     text-align: center;
     /* color: var(--light-text); */
