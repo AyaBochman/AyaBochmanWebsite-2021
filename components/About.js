@@ -8,7 +8,7 @@ const About = () => {
         <StyledAbout>
             <Heading text={'about'} />
             <span className={'location'}>
-                📍 Current location: Belgrade, Serbia
+                📍 Current Location: Belgrade, Serbia
             </span>
             <h2 className={'intro'}>
                 I’m a Front End &amp; Back End
