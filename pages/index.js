@@ -17,7 +17,7 @@ export default function Home() {
       <Navbar />
       <Main />
       {/* <footer> */}
-        <Footer />
+      <Footer />
       {/* </footer> */}
     </StyledHome>
   )
