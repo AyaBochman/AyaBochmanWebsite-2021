@@ -1,12 +1,19 @@
 import React from 'react';
 import styled from 'styled-components';
+import Slide from 'react-reveal/Slide';
+
 const Header = () => {
     return (
         <StyledHeader>
-            <div>Hello World!</div>
-            <span className={'im-aya'}>I'M AYA.</span>
-            <img className={'aya-img'} src={'../../static/img/aya.png'} alt={'me'} />
-            <div className={'fs'}>&lt;b&gt;<br />&nbsp;&nbsp;Full<br />&nbsp;&nbsp;&nbsp;&nbsp;Stack <br />&nbsp;&nbsp;Web &nbsp;<br />&nbsp;&nbsp;&nbsp;Developer<br />&lt;/b&gt;</div>
+            <Slide left>
+                <div>Hello World!</div>
+                <span className={'im-aya'}>I'M AYA.</span>
+                </Slide>
+                <img className={'aya-img'} src={'../../static/img/aya.png'} alt={'me'} />
+                <Slide left>
+                <div className={'fs'}>&lt;b&gt;<br />&nbsp;&nbsp;Full<br />&nbsp;&nbsp;&nbsp;&nbsp;Stack <br />&nbsp;&nbsp;Web &nbsp;<br />&nbsp;&nbsp;&nbsp;Developer<br />&lt;/b&gt;</div>
+           </Slide>
+
         </StyledHeader>
     );
 };
