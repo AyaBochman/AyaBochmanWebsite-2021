@@ -17,5 +17,6 @@ width: 80px;
 background: linear-gradient(90deg, var(--gradient-2) 20%, var(--gradient-1)  70%);
 display: flex;
 align-self: center;
+margin: 0 auto;
 /* margin: 20px 0; */
 `;

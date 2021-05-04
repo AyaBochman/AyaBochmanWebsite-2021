@@ -4,10 +4,12 @@ import Heading from './commons/Heading';
 import { faEnvelope, faPaperPlane } from "@fortawesome/free-solid-svg-icons";
 import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import Slide from 'react-reveal/Slide';
 
 const Contact = () => {
     return (
         <StyledContact>
+            <Slide left>
             <Heading text={'contact'} color={'#fff'} />
             <div className={'contact-details'}>
             <span><a href='https://www.linkedin.com/in/aya-bochman/' target='_blank'><FontAwesomeIcon icon={faLinkedin} /></a>Let's be friends 🤝</span>
@@ -17,8 +19,9 @@ const Contact = () => {
                     <span><a href='https://github.com/AyaBochman' target='_blank'><FontAwesomeIcon icon={faGithub} /></a></span>
                 </div>
             </div>
-
+            </Slide>
         </StyledContact>
+        
     );
 };
 
@@ -29,8 +32,8 @@ background-image: url('../../static/img/code-bg.jpg');
 background-repeat:no-repeat;
 background-size: 100% 50%;
 background-size: cover;
-height: 500px;
 width: 100%;
+height: 500px;
 text-align: center;
 color: #fff;
 line-height: 2;

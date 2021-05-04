@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import Heading from './commons/Heading';
+import Fade from 'react-reveal/Fade';
 import Divider from './commons/Divider';
 
 const About = () => {
@@ -22,7 +23,10 @@ const About = () => {
                 and Node.js web applications,
                 with SSR using Next.js.
             </div>
+            <Fade left>
             <Divider />
+            </Fade>
+          
         </StyledAbout>
     );
 };

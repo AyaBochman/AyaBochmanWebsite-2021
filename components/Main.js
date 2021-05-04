@@ -14,10 +14,10 @@ const Main = () => {
             <Fade big>
                 <Skills />
             </Fade>
-            <Fade big>
-            <Contact />
-            </Fade>
-         
+           
+                <Contact />
+           
+
         </StyledMain>
     );
 };
