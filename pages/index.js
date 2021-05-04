@@ -1,7 +1,8 @@
 import Head from 'next/head'
 import Header from '../components/Header';
 import Navbar from '../components/Navbar';
-import Content from '../components/Content';
+import Main from '../components/Main';
+import Footer from '../components/Footer';
 import styled from 'styled-components';
 
 export default function Home() {
@@ -14,14 +15,10 @@ export default function Home() {
 
       <Header />
       <Navbar />
-      <Content />
-      {/* <main className={styles.main}>
-
-      </main> */}
-
-      {/* <footer className={styles.footer}>
-
-      </footer> */}
+      <Main />
+      {/* <footer> */}
+        <Footer />
+      {/* </footer> */}
     </StyledHome>
   )
 }
