@@ -12,11 +12,13 @@ const Contact = () => {
             <Slide left>
             <Heading text={'contact'} color={'#fff'} />
             <div className={'contact-details'}>
-            <span><a href='https://www.linkedin.com/in/aya-bochman/' target='_blank'><FontAwesomeIcon icon={faLinkedin} /></a>Let's be friends 🤝</span>
+            <div>Let's be friends 🤝</div>
+            <a href='https://www.linkedin.com/in/aya-bochman/' target='_blank'><FontAwesomeIcon icon={faLinkedin} /></a>
+            <a href='https://github.com/AyaBochman' target='_blank'><FontAwesomeIcon icon={faGithub} /></a>
                 <span className={'email'}><FontAwesomeIcon icon={faEnvelope} />aya.bochman@gmail.com</span>
                 <button type="button" className={'send-btn'}><a className={'link-btn'} href={'mailto:aya.bochman@gmail.com'}>Send Email</a><FontAwesomeIcon className={'paper-plane'} icon={faPaperPlane} /></button>
                 <div className={'links-container'}>
-                    <span><a href='https://github.com/AyaBochman' target='_blank'><FontAwesomeIcon icon={faGithub} /></a></span>
+                    <div></div>
                 </div>
             </div>
             </Slide>

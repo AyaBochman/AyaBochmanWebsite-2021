@@ -28,6 +28,10 @@ a{
     font-size: 24px;
     color: var(--gradient-2);
     font-weight: 300;
+    transition: 0.2s ease-in-out;
 }
-
+a:hover{
+    color: var(--gradient-1);
+  
+}
 `;

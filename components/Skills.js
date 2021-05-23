@@ -68,6 +68,6 @@ padding: 0 49px 45px 49px;
 }
 .skills-container{
     width: 250px;
-    /* margin: 0 auto; */
+    margin: 0 auto;
 }
 `;
