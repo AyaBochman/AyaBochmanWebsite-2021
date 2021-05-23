@@ -12,7 +12,7 @@ const Main = () => {
                 <About />
             </Fade>
             <Fade big>
-                <Skills />
+                <Skills id="skills"/>
             </Fade>
            
                 <Contact />

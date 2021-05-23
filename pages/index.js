@@ -1,11 +1,13 @@
-import Head from 'next/head'
-import Header from '../components/Header';
-import Navbar from '../components/Navbar';
-import Main from '../components/Main';
-import Footer from '../components/Footer';
-import styled from 'styled-components';
+import Head from "next/head";
+import { useRef } from "react";
+import Header from "../components/Header";
+import Navbar from "../components/Navbar";
+import Main from "../components/Main";
+import Footer from "../components/Footer";
+import styled from "styled-components";
 
 export default function Home() {
+  const SkillsRef = useRef(null);
   return (
     <StyledHome>
       <Head>
@@ -15,14 +17,12 @@ export default function Home() {
 
       <Header />
       <Navbar />
-      <Main />
+      <Main SkillsRef={SkillsRef} />
       {/* <footer> */}
       <Footer />
       {/* </footer> */}
     </StyledHome>
-  )
+  );
 }
 
-const StyledHome = styled.div`
-
-`;
+const StyledHome = styled.div``;

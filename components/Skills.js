@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import Heading from './commons/Heading';
 import SkillBar from './commons/SkillBar';
 import formatDistance from 'date-fns/formatDistance';
-import formatDistanceStrict from 'date-fns/formatDistanceStrict';
 
 const skills = [
     {
@@ -41,7 +40,7 @@ const Skills = () => {
 
     return (
         <StyledSkills>
-            <Heading text={'skills'} />
+            <Heading text={'skills'}/>
             <span className={'exp'}><code>let myExp = {calculateExp()}</code>  </span>
             <div className={'skills-container'}>
                 {skills && skills.map((skill, i) => {
