@@ -11,6 +11,7 @@ const About = () => {
             <span className={'location'}>
                 📍 Current Location: Belgrade, Serbia
             </span>
+            <img className={'aya-img'} src={'../../static/img/aya.png'} alt={'me'} />
             <h2 className={'intro'}>
                 I’m a Front End &amp; Back End
                 Developer from Israel.
@@ -41,6 +42,11 @@ padding: 15px 49px;
 .location{
     text-align: center;
     /* color: var(--light-text); */
+}
+.aya-img{
+    width: 220px;
+    height: auto;
+    align-self: center;
 }
 .intro{
     text-align: center;

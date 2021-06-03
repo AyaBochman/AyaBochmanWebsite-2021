@@ -22,7 +22,7 @@ align-items: center;
 text-align: center;
 color: #fff;
 font-weight: 300;
-font-size: 18px;
+font-size: 14px;
 opacity: 0.8;
 .web-link{
     text-decoration: underline;
