@@ -13,12 +13,12 @@ const Header = () => {
         <div className={"head-text"}>
           <div>Hello World!</div>
           <span className={"im-aya"}>I'M AYA.</span>
-          <div className={"img-text"}>
+          
             <div className={"fs"}>
               <span className={"b-tag"}>&lt;b&gt;</span>Full Stack Web Developer
               <span className={"b-tag"}>&lt;/b&gt;</span>
             </div>
-          </div>
+         
         </div>
         {/* </Slide> */}
 
@@ -33,7 +33,7 @@ export default Header;
 
 const StyledBg = styled.div`
   width: 100%;
-  height: 400px;
+  height: 360px;
   background: url("../../static/img/laptop-img.jpg") no-repeat;
   background-size: cover;
   position: relative;
@@ -63,14 +63,15 @@ const StyledHeader = styled.div`
   font-family: "Roboto", sans-serif;
   font-weight: 100;
   height: auto;
-  font-size: 40px;
+  font-size: 48px;
     /* background: linear-gradient(0deg, var(--gradient-2) 20%, var(--gradient-1) 70%); */
 position: absolute;
-top: 90px;
-left: calc(50% - 116px);
+top: 50px;
+left: calc(50% - 126px);
 /* left: 15%; */
   .im-aya {
     font-weight: 500;
+    margin-bottom: 20px;
   }
 
   .b-tag {
@@ -81,11 +82,11 @@ left: calc(50% - 116px);
     padding: 0 5px;
   }
   .fs {
-    font-size: 28px;
+    font-size: 34px;
     font-weight: normal;
     text-align: center;
-    width: 200px;
-    margin: 15px;
+    width: 250px;
+    /* margin: 15px; */
   }
 
   .head-text {
