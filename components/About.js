@@ -25,9 +25,9 @@ const About = () => {
         text={"download cv"}
         icon={<FontAwesomeIcon icon={faDownload} />}
       />
-      <Fade left>
+      {/* <Fade left>
         <Divider />
-      </Fade>
+      </Fade> */}
     </StyledAbout>
   );
 };
@@ -39,10 +39,7 @@ const StyledAbout = styled.div`
   justify-content: center;
   flex-direction: column;
   padding: 15px 49px;
-  .location {
-    text-align: center;
-    /* color: var(--light-text); */
-  }
+  text-align: center;
   .aya-img {
     width: 220px;
     height: auto;
@@ -56,6 +53,8 @@ const StyledAbout = styled.div`
   .about-text {
     line-height: 1.3;
     margin-bottom: 30px;
+    width: 600px;
+    margin: 0 auto 30px auto;
   }
   @media (min-width: 768px) {
     padding: 15px 150px;

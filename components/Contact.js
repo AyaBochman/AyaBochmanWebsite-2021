@@ -11,7 +11,7 @@ const Contact = () => {
   return (
     <StyledContact>
       <Slide left>
-        <Heading text={"contact"} color={"#fff"} />
+        <Heading text={"contact"} />
         <div className={"contact-details"}>
           <div>Let's be friends 🤝</div>
           <a href="https://www.linkedin.com/in/aya-bochman/" target="_blank">
@@ -46,14 +46,14 @@ const Contact = () => {
 export default Contact;
 
 const StyledContact = styled.div`
-  background-image: url("../../static/img/code-bg.jpg");
+  /* background-image: url("../../static/img/code-bg.jpg");
   background-repeat: no-repeat;
   background-size: 100% 50%;
-  background-size: cover;
+  background-size: cover; */
   width: 100%;
   height: 500px;
   text-align: center;
-  color: #fff;
+  /* color: #fff; */
   line-height: 2;
   .contact-details {
     font-size: 20px;

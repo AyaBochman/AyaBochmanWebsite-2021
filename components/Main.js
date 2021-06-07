@@ -6,18 +6,19 @@ import Joke from "./Joke";
 import Contact from "./Contact";
 import Fade from "react-reveal/Fade";
 
+
 const Main = () => {
   return (
-    <StyledMain>
-      <Fade big>
-        <About />
-      </Fade>
-      <Fade big>
-        <Skills id="skills" />
-      </Fade>
-      <Joke />
-      <Contact />
-    </StyledMain>
+      <StyledMain>
+        <Fade big>
+          <About />
+        </Fade>
+        <Fade big>
+          <Skills id="skills" />
+        </Fade>
+        <Joke />
+        <Contact />
+      </StyledMain>
   );
 };
 
