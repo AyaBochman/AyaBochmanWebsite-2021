@@ -63,6 +63,7 @@ const StyledContact = styled.div`
     width: 28px;
     transition: all 0.1s ease-in-out;
     margin-right: 10px;
+    color: var(--gradient-1);
     &:hover {
       transform: scale(1.2);
     }

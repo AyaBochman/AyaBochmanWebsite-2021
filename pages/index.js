@@ -44,7 +44,7 @@ const StyledHome = styled.div`
     width: 40px;
     position: fixed;
     bottom: 70px;
-    right: 10px;
+    right: 50px;
     border-radius: 20px;
     border: 1px solid var(--gradient-1);
     cursor: pointer;

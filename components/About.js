@@ -19,10 +19,17 @@ const About = () => {
       <div className={"about-text"}>
         I came from the designing world and fell in love with the way code is
         bringing everything to life. I’m currently specialized in React and
-        Node.js web applications, with SSR using Next.js.
+        Node.js web applications, with SSR using Next.js. I love designing and
+        building web applications from scratch, for work and for fun, with
+        determination to create the best experience.
       </div>
+
       <CustomButton
-        text={"download cv"}
+        text={
+          <a href="../../static/img/Aya-Bochman-CV.pdf" download>
+            Download CV
+          </a>
+        }
         icon={<FontAwesomeIcon icon={faDownload} />}
       />
       {/* <Fade left>

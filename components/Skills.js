@@ -7,7 +7,7 @@ import formatDistance from 'date-fns/formatDistance';
 const skills = [
     {
         name: 'React',
-        percent: '85'
+        percent: '90'
     },
     {
         name: 'CSS',

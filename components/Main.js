@@ -14,7 +14,7 @@ const Main = () => {
           <About />
         </Fade>
         <Fade big>
-          <Skills id="skills" />
+          <Skills />
         </Fade>
         <Joke />
         <Contact />
