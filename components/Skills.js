@@ -31,7 +31,7 @@ const skills = [
     }
 ];
 
-const Skills = () => {
+const Skills = ({skillsRef}) => {
 
     const calculateExp = () => {
         const args = [new Date(2019, 1, 9), new Date()];
@@ -40,7 +40,7 @@ const Skills = () => {
 
     return (
         <StyledSkills>
-            <Heading text={'skills'}/>
+            <Heading itemRef={skillsRef} text={'skills'}/>
             <span className={'exp'}><code>let myExp = {calculateExp()}</code>  </span>
             <div className={'skills-container'}>
                 {skills && skills.map((skill, i) => {
@@ -59,7 +59,7 @@ const StyledSkills = styled.div`
 display: flex;
 flex-direction: column;
 justify-content: center;
-padding: 0 49px 45px 49px;
+padding: 0 49px 45px 40px;
 .exp{
     margin: 0 auto 20px auto;
     font-size: 16px;

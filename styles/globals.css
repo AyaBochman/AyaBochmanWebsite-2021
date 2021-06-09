@@ -16,6 +16,7 @@ a {
 
 * {
   box-sizing: border-box;
+  scroll-margin-top: 60px;
 }
 
 :root {
@@ -23,4 +24,5 @@ a {
   --gradient-2: #51369f;
   --light-bg: #f6f7f8;
   --light-text: #787878;
+  --header-height: 360px;
 }

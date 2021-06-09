@@ -1,9 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const Heading = ({ text, color }) => {
+const Heading = ({ text, color, itemRef }) => {
     return (
-        <StyledHeading color={color}>
+        <StyledHeading color={color} ref={itemRef}>
             <h1 className={'heading'}>{text}</h1>
         </StyledHeading>
     );

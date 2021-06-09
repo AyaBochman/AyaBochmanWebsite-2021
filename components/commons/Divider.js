@@ -3,9 +3,9 @@ import styled from 'styled-components';
 
 const Divider = () => {
     return (
-        <StyledDivider>
+        <StyledDivider />
             
-        </StyledDivider>
+        // </StyledDivider>
     );
 };
 

@@ -5,35 +5,36 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope, faPaperPlane } from "@fortawesome/free-solid-svg-icons";
 import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
 import CustomButton from "./commons/CustomButton";
-import Slide from "react-reveal/Slide";
+import { Slide, Flip, Fade } from "react-reveal";
 
-const Contact = () => {
+const Contact = ({ contactRef }) => {
   return (
     <StyledContact>
       <Slide left>
-        <Heading text={"contact"} />
+        <Heading itemRef={contactRef} text={"contact"} />
         <div className={"contact-details"}>
           <div>Let's be friends 🤝</div>
           <a href="https://www.linkedin.com/in/aya-bochman/" target="_blank">
-            <FontAwesomeIcon className={'contact-icon'} icon={faLinkedin} />
+            <FontAwesomeIcon className={"contact-icon"} icon={faLinkedin} />
           </a>
           <a href="https://github.com/AyaBochman" target="_blank">
-            <FontAwesomeIcon className={'contact-icon'} icon={faGithub} />
+            <FontAwesomeIcon className={"contact-icon"} icon={faGithub} />
           </a>
           <span className={"email"}>
-            <FontAwesomeIcon className={'contact-icon'} icon={faEnvelope} />
+            <FontAwesomeIcon className={"contact-icon"} icon={faEnvelope} />
             aya.bochman@gmail.com
           </span>
-          <CustomButton
-            text={
-              <a href={"mailto:aya.bochman@gmail.com"}>
-                send email
-              </a>
-            }
-            icon={
-              <FontAwesomeIcon className={"paper-plane"} icon={faPaperPlane} />
-            }
-          />
+          <Flip bottom>
+            <CustomButton
+              text={<a href={"mailto:aya.bochman@gmail.com"}>send email</a>}
+              icon={
+                <FontAwesomeIcon
+                  className={"paper-plane"}
+                  icon={faPaperPlane}
+                />
+              }
+            />
+          </Flip>
           <div className={"links-container"}>
             <div></div>
           </div>

@@ -1,16 +1,16 @@
 import React from "react";
 import styled from "styled-components";
 import Heading from "./commons/Heading";
-import Fade from "react-reveal/Fade";
+import { Flip, Fade } from "react-reveal";
 import Divider from "./commons/Divider";
 import CustomButton from "./commons/CustomButton";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faDownload } from "@fortawesome/free-solid-svg-icons";
 
-const About = () => {
+const About = ({aboutRef}) => {
   return (
     <StyledAbout>
-      <Heading text={"about"} />
+      <Heading itemRef={aboutRef} text={"about"} />
       <img className={"aya-img"} src={"../../static/img/aya.png"} alt={"me"} />
       {/* <span className={"location"}>📍 Current Location: Belgrade, Serbia</span> */}
       <h2 className={"intro"}>
@@ -23,15 +23,16 @@ const About = () => {
         building web applications from scratch, for work and for fun, with
         determination to create the best experience.
       </div>
-
-      <CustomButton
-        text={
-          <a href="../../static/img/Aya-Bochman-CV.pdf" download>
-            Download CV
-          </a>
-        }
-        icon={<FontAwesomeIcon icon={faDownload} />}
-      />
+      <Flip bottom>
+        <CustomButton
+          text={
+            <a href="../../static/files/Aya-Bochman-CV.pdf" download>
+              Download CV
+            </a>
+          }
+          icon={<FontAwesomeIcon icon={faDownload} />}
+        />
+      </Flip>
       {/* <Fade left>
         <Divider />
       </Fade> */}
@@ -45,7 +46,7 @@ const StyledAbout = styled.div`
   display: flex;
   justify-content: center;
   flex-direction: column;
-  padding: 15px 49px;
+  padding: 15px 40px;
   text-align: center;
   .aya-img {
     width: 220px;
@@ -60,10 +61,10 @@ const StyledAbout = styled.div`
   .about-text {
     line-height: 1.3;
     margin-bottom: 30px;
-    width: 600px;
+    /* width: 600px; */
     margin: 0 auto 30px auto;
   }
   @media (min-width: 768px) {
-    padding: 15px 150px;
+    padding: 15px 350px;
   }
 `;
