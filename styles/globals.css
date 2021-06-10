@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Courgette&family=Raleway:wght@200;300&family=Roboto:wght@100;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Courgette&family=Raleway:wght@200;300;400&family=Roboto:wght@100;500&display=swap");
 
 html,
 body {
@@ -16,7 +16,7 @@ a {
 
 * {
   box-sizing: border-box;
-  scroll-margin-top: 60px;
+  scroll-margin-top: 80px;
 }
 
 :root {

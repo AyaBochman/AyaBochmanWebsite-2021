@@ -5,12 +5,13 @@ import { Flip, Fade } from "react-reveal";
 import Divider from "./commons/Divider";
 import CustomButton from "./commons/CustomButton";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faDownload, faPencilAlt } from "@fortawesome/free-solid-svg-icons";
+import { faDownload, faUserAstronaut } from "@fortawesome/free-solid-svg-icons";
 
 const About = ({aboutRef}) => {
   return (
     <StyledAbout>
-      <Heading itemRef={aboutRef} text={"about"} />
+      <Heading itemRef={aboutRef} text={"about"} /> 
+      {/* <FontAwesomeIcon icon={faUserAstronaut} /> */}
       <img className={"aya-img"} src={"../../static/img/aya.png"} alt={"me"} />
       {/* <span className={"location"}>📍 Current Location: Belgrade, Serbia</span> */}
       <h2 className={"intro"}>
@@ -46,7 +47,7 @@ const StyledAbout = styled.div`
   display: flex;
   justify-content: center;
   flex-direction: column;
-  padding: 15px 40px 30px 40px;
+  padding: 30px 40px 40px 40px;
   box-shadow: 0 4px 6px -4px grey;
   /* text-align: center; */
   .aya-img {
@@ -66,6 +67,6 @@ const StyledAbout = styled.div`
     margin: 0 auto 30px auto;
   }
   @media (min-width: 1024px) {
-    padding: 15px 300px 40px 300px;
+    padding: 40px 300px 40px 300px;
   }
 `;

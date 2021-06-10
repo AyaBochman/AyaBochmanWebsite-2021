@@ -10,16 +10,10 @@ import { Slide, Flip, Fade } from "react-reveal";
 const Contact = ({ contactRef }) => {
   return (
     <StyledContact>
-        <Heading itemRef={contactRef} text={"contact"} />
-        <Fade bottom>
+      <Heading itemRef={contactRef} text={"contact"} />
+      <Fade bottom>
         <div className={"contact-details"}>
-          <div>Let's be friends 🤝</div>
-          <a href="https://www.linkedin.com/in/aya-bochman/" target="_blank">
-            <FontAwesomeIcon className={"contact-icon"} icon={faLinkedin} />
-          </a>
-          <a href="https://github.com/AyaBochman" target="_blank">
-            <FontAwesomeIcon className={"contact-icon"} icon={faGithub} />
-          </a>
+          <div>Want us to work together? Send me a message!</div>
           <span className={"email"}>
             <FontAwesomeIcon className={"contact-icon"} icon={faEnvelope} />
             aya.bochman@gmail.com
@@ -35,6 +29,14 @@ const Contact = ({ contactRef }) => {
               }
             />
           </Flip>
+          <div>And find me here:</div>
+          <a href="https://www.linkedin.com/in/aya-bochman/" target="_blank">
+            <FontAwesomeIcon className={"contact-icon"} icon={faLinkedin} />
+          </a>
+          <a href="https://github.com/AyaBochman" target="_blank">
+            <FontAwesomeIcon className={"contact-icon"} icon={faGithub} />
+          </a>
+
           <div className={"links-container"}>
             <div></div>
           </div>
@@ -54,11 +56,9 @@ const StyledContact = styled.div`
   width: 100%;
   /* height: 500px; */
   text-align: center;
-  /* color: #fff; */
-  line-height: 1.3;
-  padding: 20px 50px 45px 50px;
+  padding: 40px;
   .contact-details {
-    font-size: 20px;
+    /* font-size: 20px; */
   }
   .contact-icon {
     height: 28px;

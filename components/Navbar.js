@@ -39,6 +39,7 @@ export default Navbar;
 
 const StyledNav = styled.div`
   height: 60px;
+  font-family: 'Raleway';
   box-shadow: 0 4px 6px -4px grey;
   display: flex;
   justify-content: center;
