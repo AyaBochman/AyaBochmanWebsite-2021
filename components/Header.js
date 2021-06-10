@@ -6,6 +6,7 @@ const Header = ({ topRef }) => {
   return (
     <>
       <StyledBg ref={topRef} />
+    
       <StyledHeader>
         <div className={"head-text"}>
           <Slide left>
@@ -102,5 +103,12 @@ const StyledHeader = styled.div`
     align-items: center;
     flex-wrap: wrap;
     justify-content: center;
+  }
+
+  @media (min-width: 768px){
+    /* .fs{
+      font-size: 50px;
+      width: auto;
+    } */
   }
 `;

@@ -4,7 +4,7 @@ import styled from 'styled-components';
 const Heading = ({ text, color, itemRef }) => {
     return (
         <StyledHeading color={color} ref={itemRef}>
-            <h1 className={'heading'}>{text}</h1>
+            <div className={'heading'}>{text}</div>
         </StyledHeading>
     );
 };
@@ -15,7 +15,11 @@ const StyledHeading = styled.div`
     font-family: 'Raleway', sans-serif;
     text-transform: uppercase;
     text-align: center;
+    font-size: 32px;
+    padding: 10px;
+    background-color: var(--gradient-1);
     margin: 0 auto;
     font-weight: 300;
-    color: ${props => props.color ? props.color : 'var(--gradient-1)'};
+    width: 100%;
+    color: ${props => props.color ? props.color : '#fff'};
 `;

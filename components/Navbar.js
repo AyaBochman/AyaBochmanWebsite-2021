@@ -48,9 +48,8 @@ const StyledNav = styled.div`
   position: -webkit-sticky;
   position: sticky;
   top: 0;
-  /* background: ${({ theme }) => theme.background}; */
   z-index: 1;
-
+  background-color: var(--light-bg);
   a {
     text-transform: uppercase;
     font-size: 20px;

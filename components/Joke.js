@@ -42,11 +42,10 @@ const Joke = () => {
 export default Joke;
 
 const JokeStyle = styled.div`
-background-color: var(--gradient-2);
+/* background-color: var(--gradient-2); */
 display: flex;
-color: #fff;
 padding: 25px;
-box-shadow: 0 4px 6px -4px grey;
+/* box-shadow: 0 4px 6px -4px grey; */
 .joke{
     margin: 0 auto;
 }

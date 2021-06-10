@@ -35,9 +35,7 @@ export default function Home() {
           <FontAwesomeIcon icon={darkMode ? farMoon : faMoon} />
         </button>
         <Main topRef={topRef} aboutRef={aboutRef} skillsRef={skillsRef} contactRef={contactRef}/>
-        {/* <footer> */}
         <Footer />
-        {/* </footer> */}
       </StyledHome>
     </ThemeProvider>
   );

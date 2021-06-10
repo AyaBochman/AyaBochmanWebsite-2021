@@ -9,38 +9,40 @@ import { Slide, Flip, Fade } from "react-reveal";
 
 const Contact = ({ contactRef }) => {
   return (
-    <StyledContact>
-      <Slide left>
-        <Heading itemRef={contactRef} text={"contact"} />
-        <div className={"contact-details"}>
-          <div>Let's be friends 🤝</div>
-          <a href="https://www.linkedin.com/in/aya-bochman/" target="_blank">
-            <FontAwesomeIcon className={"contact-icon"} icon={faLinkedin} />
-          </a>
-          <a href="https://github.com/AyaBochman" target="_blank">
-            <FontAwesomeIcon className={"contact-icon"} icon={faGithub} />
-          </a>
-          <span className={"email"}>
-            <FontAwesomeIcon className={"contact-icon"} icon={faEnvelope} />
-            aya.bochman@gmail.com
-          </span>
-          <Flip bottom>
-            <CustomButton
-              text={<a href={"mailto:aya.bochman@gmail.com"}>send email</a>}
-              icon={
-                <FontAwesomeIcon
-                  className={"paper-plane"}
-                  icon={faPaperPlane}
-                />
-              }
-            />
-          </Flip>
-          <div className={"links-container"}>
-            <div></div>
+    <>
+      <Heading itemRef={contactRef} text={"contact"} />
+      <StyledContact>
+        <Fade bottom>
+          <div className={"contact-details"}>
+            <div>Let's be friends 🤝</div>
+            <a href="https://www.linkedin.com/in/aya-bochman/" target="_blank">
+              <FontAwesomeIcon className={"contact-icon"} icon={faLinkedin} />
+            </a>
+            <a href="https://github.com/AyaBochman" target="_blank">
+              <FontAwesomeIcon className={"contact-icon"} icon={faGithub} />
+            </a>
+            <span className={"email"}>
+              <FontAwesomeIcon className={"contact-icon"} icon={faEnvelope} />
+              aya.bochman@gmail.com
+            </span>
+            <Flip bottom>
+              <CustomButton
+                text={<a href={"mailto:aya.bochman@gmail.com"}>send email</a>}
+                icon={
+                  <FontAwesomeIcon
+                    className={"paper-plane"}
+                    icon={faPaperPlane}
+                  />
+                }
+              />
+            </Flip>
+            <div className={"links-container"}>
+              <div></div>
+            </div>
           </div>
-        </div>
-      </Slide>
-    </StyledContact>
+        </Fade>
+      </StyledContact>
+    </>
   );
 };
 
@@ -52,10 +54,11 @@ const StyledContact = styled.div`
   background-size: 100% 50%;
   background-size: cover; */
   width: 100%;
-  height: 500px;
+  /* height: 500px; */
   text-align: center;
   /* color: #fff; */
-  line-height: 2;
+  line-height: 1.3;
+  padding: 20px 50px 45px 50px;
   .contact-details {
     font-size: 20px;
   }
@@ -73,5 +76,9 @@ const StyledContact = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+
+  @media (min-width: 1024px) {
+    padding: 30px 300px 40px 300px;
   }
 `;

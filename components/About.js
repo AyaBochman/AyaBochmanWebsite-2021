@@ -5,38 +5,42 @@ import { Flip, Fade } from "react-reveal";
 import Divider from "./commons/Divider";
 import CustomButton from "./commons/CustomButton";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faDownload } from "@fortawesome/free-solid-svg-icons";
+import { faDownload, faPencilAlt } from "@fortawesome/free-solid-svg-icons";
 
 const About = ({aboutRef}) => {
   return (
-    <StyledAbout>
-      <Heading itemRef={aboutRef} text={"about"} />
-      <img className={"aya-img"} src={"../../static/img/aya.png"} alt={"me"} />
-      {/* <span className={"location"}>📍 Current Location: Belgrade, Serbia</span> */}
-      <h2 className={"intro"}>
-        I’m a Front End &amp; Back End Developer from Israel.
-      </h2>
-      <div className={"about-text"}>
-        I came from the designing world and fell in love with the way code is
-        bringing everything to life. I’m currently specialized in React and
-        Node.js web applications, with SSR using Next.js. I love designing and
-        building web applications from scratch, for work and for fun, with
-        determination to create the best experience.
-      </div>
-      <Flip bottom>
-        <CustomButton
-          text={
-            <a href="../../static/files/Aya-Bochman-CV.pdf" download>
-              Download CV
-            </a>
-          }
-          icon={<FontAwesomeIcon icon={faDownload} />}
-        />
-      </Flip>
-      {/* <Fade left>
-        <Divider />
-      </Fade> */}
-    </StyledAbout>
+      <>
+       <Heading itemRef={aboutRef} text={"about"} />
+       <StyledAbout>
+     
+     <img className={"aya-img"} src={"../../static/img/aya.png"} alt={"me"} />
+     {/* <span className={"location"}>📍 Current Location: Belgrade, Serbia</span> */}
+     <h2 className={"intro"}>
+       I’m a Front End &amp; Back End Developer from Israel.
+     </h2>
+     <div className={"about-text"}>
+       My name is Aya Bochman, I came from the designing world and fell in love with the way code is
+       bringing everything to life. I’m currently specialized in React and
+       Node.js web applications, with SSR using Next.js. I love designing and
+       building web applications from scratch, for work and for fun, with
+       determination to create the best experience.
+     </div>
+     <Flip bottom>
+       <CustomButton
+         text={
+           <a href="../../static/files/Aya-Bochman-CV.pdf" download>
+             Download CV
+           </a>
+         }
+         icon={<FontAwesomeIcon icon={faDownload} />}
+       />
+     </Flip>
+     {/* <Fade left>
+       <Divider />
+     </Fade> */}
+   </StyledAbout>
+      </>
+   
   );
 };
 
@@ -46,8 +50,9 @@ const StyledAbout = styled.div`
   display: flex;
   justify-content: center;
   flex-direction: column;
-  padding: 15px 40px;
-  text-align: center;
+  padding: 15px 40px 30px 40px;
+  box-shadow: 0 4px 6px -4px grey;
+  /* text-align: center; */
   .aya-img {
     width: 220px;
     height: auto;
@@ -64,7 +69,7 @@ const StyledAbout = styled.div`
     /* width: 600px; */
     margin: 0 auto 30px auto;
   }
-  @media (min-width: 768px) {
-    padding: 15px 350px;
+  @media (min-width: 1024px) {
+    padding: 30px 300px 40px 300px;
   }
 `;
