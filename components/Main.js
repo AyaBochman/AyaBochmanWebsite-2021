@@ -20,8 +20,9 @@ const Main = ({ topRef, aboutRef, skillsRef, contactRef }) => {
       <Fade big>
         <Skills skillsRef={skillsRef} />
       </Fade>
-      <Joke />
+     
       <Contact contactRef={contactRef} />
+      <Joke />
       <a className={"up-btn"} onClick={scrollTop}>
         <FontAwesomeIcon icon={faChevronUp} />
       </a>

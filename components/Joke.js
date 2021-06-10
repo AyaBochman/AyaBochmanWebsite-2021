@@ -42,23 +42,25 @@ const Joke = () => {
 export default Joke;
 
 const JokeStyle = styled.div`
-/* background-color: var(--gradient-2); */
-display: flex;
-padding: 25px;
-/* box-shadow: 0 4px 6px -4px grey; */
-.joke{
+  /* background-color: var(--gradient-2); */
+  display: flex;
+  padding: 25px;
+  height: 300px;
+  align-items: center;
+  /* box-shadow: 0 4px 6px -4px grey; */
+  .joke {
     margin: 0 auto;
-}
-.joke-head{
-    font-family: 'Courgette', cursive;
+  }
+  .joke-head {
+    font-family: "Courgette", cursive;
     color: var(--gradient-1);
     font-size: 28px;
     text-align: center;
-}
-.joke-text{
+  }
+  .joke-text {
     line-height: 1.2;
     padding: 10px 0;
-}
+  }
   .joke-credit {
     font-size: 12px;
     float: right;

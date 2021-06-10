@@ -9,40 +9,38 @@ import { Slide, Flip, Fade } from "react-reveal";
 
 const Contact = ({ contactRef }) => {
   return (
-    <>
-      <Heading itemRef={contactRef} text={"contact"} />
-      <StyledContact>
+    <StyledContact>
+        <Heading itemRef={contactRef} text={"contact"} />
         <Fade bottom>
-          <div className={"contact-details"}>
-            <div>Let's be friends 🤝</div>
-            <a href="https://www.linkedin.com/in/aya-bochman/" target="_blank">
-              <FontAwesomeIcon className={"contact-icon"} icon={faLinkedin} />
-            </a>
-            <a href="https://github.com/AyaBochman" target="_blank">
-              <FontAwesomeIcon className={"contact-icon"} icon={faGithub} />
-            </a>
-            <span className={"email"}>
-              <FontAwesomeIcon className={"contact-icon"} icon={faEnvelope} />
-              aya.bochman@gmail.com
-            </span>
-            <Flip bottom>
-              <CustomButton
-                text={<a href={"mailto:aya.bochman@gmail.com"}>send email</a>}
-                icon={
-                  <FontAwesomeIcon
-                    className={"paper-plane"}
-                    icon={faPaperPlane}
-                  />
-                }
-              />
-            </Flip>
-            <div className={"links-container"}>
-              <div></div>
-            </div>
+        <div className={"contact-details"}>
+          <div>Let's be friends 🤝</div>
+          <a href="https://www.linkedin.com/in/aya-bochman/" target="_blank">
+            <FontAwesomeIcon className={"contact-icon"} icon={faLinkedin} />
+          </a>
+          <a href="https://github.com/AyaBochman" target="_blank">
+            <FontAwesomeIcon className={"contact-icon"} icon={faGithub} />
+          </a>
+          <span className={"email"}>
+            <FontAwesomeIcon className={"contact-icon"} icon={faEnvelope} />
+            aya.bochman@gmail.com
+          </span>
+          <Flip bottom>
+            <CustomButton
+              text={<a href={"mailto:aya.bochman@gmail.com"}>send email</a>}
+              icon={
+                <FontAwesomeIcon
+                  className={"paper-plane"}
+                  icon={faPaperPlane}
+                />
+              }
+            />
+          </Flip>
+          <div className={"links-container"}>
+            <div></div>
           </div>
-        </Fade>
-      </StyledContact>
-    </>
+        </div>
+      </Fade>
+    </StyledContact>
   );
 };
 
@@ -76,9 +74,5 @@ const StyledContact = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-  }
-
-  @media (min-width: 1024px) {
-    padding: 30px 300px 40px 300px;
   }
 `;
