@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useEffect } from "react";
 import styled from "styled-components";
 import About from "./About";
 import Skills from "./Skills";
@@ -9,6 +9,25 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronUp } from "@fortawesome/free-solid-svg-icons";
 
 const Main = ({ topRef, aboutRef, skillsRef, contactRef }) => {
+  useEffect(() => {
+    //  let about = document.querySelector("#about");
+    //  console.log('about',about);
+
+  // window.addEventListener("scroll", () => {
+  //   const windo = window.pageYOffset;
+  //   if (
+  //     skillsRef.current.offsetTop <= windo &&
+  //     contactRef.current.offsetTop > windo
+  //   ) {
+  //     console.log("skills");
+  //   } else if (contactRef.current.offsetTop >= windo) {
+  //     console.log("contact");
+  //   } else {
+  //     console.log("about");
+  //   }
+  // });
+  }, []);
+
   const scrollTop = () => {
     topRef.current.scrollIntoView({ behavior: "smooth", block: "start" });
   };
@@ -20,7 +39,7 @@ const Main = ({ topRef, aboutRef, skillsRef, contactRef }) => {
       <Fade big>
         <Skills skillsRef={skillsRef} />
       </Fade>
-     
+
       <Contact contactRef={contactRef} />
       <Joke />
       <a className={"up-btn"} onClick={scrollTop}>
@@ -38,7 +57,7 @@ const StyledMain = styled.div`
   justify-content: center;
   font-size: 16px;
   /* padding: 15px 49px; */
-  font-family: 'Raleway';
+  font-family: "Raleway";
   color: var(--light-text);
   .up-btn {
     height: 50px;
@@ -48,7 +67,7 @@ const StyledMain = styled.div`
     cursor: pointer;
   }
 
-  @media (min-width: 1024px){
+  @media (min-width: 1024px) {
     font-size: 18px;
   }
 `;

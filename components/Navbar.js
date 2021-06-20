@@ -1,18 +1,33 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import Fade from "react-reveal/Fade";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faGlobe } from "@fortawesome/free-solid-svg-icons";
 
 const Navbar = ({ aboutRef, skillsRef, contactRef }) => {
+  const [scroll, setScroll] = useState(0);
+  // const ga = window.pageYOffset;
+  // useEffect(() => {
+  //   window.addEventListener("scroll", listenToScroll);
+  // }, []);
+
+  const listenToScroll = () => {
+    // const winScroll =
+    //   document.body.scrollTop || document.documentElement.scrollTop;
+
+    // const height =
+    //   document.documentElement.scrollHeight -
+    //   document.documentElement.clientHeight;
+
+    // console.log("scrolled", height);
+    // setScroll(height);
+  };
+
   const scrollRef = (ref) => {
     ref.current.scrollIntoView({ behavior: "smooth", block: "start" });
   };
+
   return (
     <StyledNav>
       <Fade top>
-        {/* <FontAwesomeIcon icon={faGlobe} /> */}
-        {/* <a type="button">🌐 Aya Bochman Full Stack Web Developer</a> */}
         <a onClick={() => scrollRef(aboutRef)} className={"link"} href="#about">
           About
         </a>
@@ -39,7 +54,7 @@ export default Navbar;
 
 const StyledNav = styled.div`
   height: 60px;
-  font-family: 'Raleway';
+  font-family: "Raleway";
   box-shadow: 0 4px 6px -4px grey;
   display: flex;
   justify-content: center;
@@ -62,7 +77,8 @@ const StyledNav = styled.div`
   }
 
   a.link {
-    &:hover, &:focus {
+    &:hover,
+    &:focus {
       color: var(--gradient-1);
       border-bottom: 3px solid var(--gradient-1);
     }
