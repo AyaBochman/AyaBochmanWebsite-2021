@@ -9,25 +9,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronUp } from "@fortawesome/free-solid-svg-icons";
 
 const Main = ({ topRef, aboutRef, skillsRef, contactRef }) => {
-  useEffect(() => {
-    //  let about = document.querySelector("#about");
-    //  console.log('about',about);
-
-  // window.addEventListener("scroll", () => {
-  //   const windo = window.pageYOffset;
-  //   if (
-  //     skillsRef.current.offsetTop <= windo &&
-  //     contactRef.current.offsetTop > windo
-  //   ) {
-  //     console.log("skills");
-  //   } else if (contactRef.current.offsetTop >= windo) {
-  //     console.log("contact");
-  //   } else {
-  //     console.log("about");
-  //   }
-  // });
-  }, []);
-
   const scrollTop = () => {
     topRef.current.scrollIntoView({ behavior: "smooth", block: "start" });
   };
@@ -70,4 +51,5 @@ const StyledMain = styled.div`
   @media (min-width: 1024px) {
     font-size: 18px;
   }
+
 `;

@@ -3,23 +3,6 @@ import styled from "styled-components";
 import Fade from "react-reveal/Fade";
 
 const Navbar = ({ aboutRef, skillsRef, contactRef }) => {
-  const [scroll, setScroll] = useState(0);
-  // const ga = window.pageYOffset;
-  // useEffect(() => {
-  //   window.addEventListener("scroll", listenToScroll);
-  // }, []);
-
-  const listenToScroll = () => {
-    // const winScroll =
-    //   document.body.scrollTop || document.documentElement.scrollTop;
-
-    // const height =
-    //   document.documentElement.scrollHeight -
-    //   document.documentElement.clientHeight;
-
-    // console.log("scrolled", height);
-    // setScroll(height);
-  };
 
   const scrollRef = (ref) => {
     ref.current.scrollIntoView({ behavior: "smooth", block: "start" });
@@ -28,7 +11,11 @@ const Navbar = ({ aboutRef, skillsRef, contactRef }) => {
   return (
     <StyledNav>
       <Fade top>
-        <a onClick={() => scrollRef(aboutRef)} className={"link"} href="#about">
+        <a
+          onClick={() => scrollRef(aboutRef)}
+          className={"link"}
+          href="#about"
+        >
           About
         </a>
         <a
@@ -82,6 +69,11 @@ const StyledNav = styled.div`
       color: var(--gradient-1);
       border-bottom: 3px solid var(--gradient-1);
     }
+  }
+
+  .active {
+    color: var(--gradient-1);
+    border-bottom: 3px solid var(--gradient-1);
   }
 
   @media (min-width: 768px) {
