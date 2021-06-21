@@ -49,17 +49,9 @@ const Contact = ({ contactRef }) => {
 export default Contact;
 
 const StyledContact = styled.div`
-  /* background-image: url("../../static/img/code-bg.jpg");
-  background-repeat: no-repeat;
-  background-size: 100% 50%;
-  background-size: cover; */
   width: 100%;
-  /* height: 500px; */
   text-align: center;
   padding: 40px;
-  .contact-details {
-    /* font-size: 20px; */
-  }
   .contact-icon {
     height: 28px;
     width: 28px;

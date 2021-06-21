@@ -23,7 +23,7 @@ const StyledButton = styled.div`
     width: auto;
     display: flex;
     text-align: center;
-    margin: 10px auto;
+    margin: 20px auto;
     align-items: center;
     border-radius: 10px;
     color: #fff;
