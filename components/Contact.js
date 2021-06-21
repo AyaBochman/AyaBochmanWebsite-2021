@@ -1,4 +1,4 @@
-import React from "react";
+import React, { forwardRef } from "react";
 import styled from "styled-components";
 import Heading from "./commons/Heading";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -7,10 +7,10 @@ import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
 import CustomButton from "./commons/CustomButton";
 import { Slide, Flip, Fade } from "react-reveal";
 
-const Contact = ({ contactRef }) => {
+const Contact = forwardRef((props, ref) => {
   return (
     <StyledContact>
-      <Heading itemRef={contactRef} text={"contact"} />
+      <Heading ref={ref} text={"contact"} />
       <Fade bottom>
         <div className={"contact-details"}>
           <div>Want us to work together? Send me a message!</div>
@@ -44,7 +44,7 @@ const Contact = ({ contactRef }) => {
       </Fade>
     </StyledContact>
   );
-};
+});
 
 export default Contact;
 

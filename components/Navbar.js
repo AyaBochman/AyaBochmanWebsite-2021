@@ -1,36 +1,44 @@
-import React, { useState, useEffect } from "react";
+import React, { forwardRef } from "react";
 import styled from "styled-components";
 import Fade from "react-reveal/Fade";
 
-const Navbar = ({ aboutRef, skillsRef, contactRef }) => {
-  const scrollRef = (ref) => {
-    ref.current.scrollIntoView({ behavior: "smooth", block: "start" });
+const Navbar = forwardRef((props, refs) => {
+  const scrollRef = (name) => {
+    console.log("ref pressed", name);
+    refs[name].current.scrollIntoView({ behavior: "smooth", block: "start" });
   };
 
   return (
     <StyledNav>
       <Fade top>
-        <a onClick={() => scrollRef(aboutRef)} className={"link"} href="#about">
+        <a
+          onClick={() => scrollRef("about")}
+          className={"link"}
+          href="#about"
+          // name="about"
+        >
           About
         </a>
         <a
-          onClick={() => scrollRef(skillsRef)}
+          onClick={() => scrollRef("skills")}
           className={"link"}
           href="#skills"
+          // name="skills"
         >
           Skills
         </a>
         <a
-          onClick={() => scrollRef(contactRef)}
+          onClick={() => scrollRef("contact")}
           className={"link"}
           href="#contact"
+          // name="contact"
         >
           Contact
         </a>
       </Fade>
     </StyledNav>
   );
-};
+});
 
 export default Navbar;
 

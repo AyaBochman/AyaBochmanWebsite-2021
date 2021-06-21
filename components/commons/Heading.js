@@ -1,13 +1,18 @@
-import React from "react";
+import React, { forwardRef, useEffect } from "react";
 import styled from "styled-components";
 
-const Heading = ({ text, color, itemRef }) => {
+const Heading = forwardRef((props, ref) => {
+  const { text, color } = props;
+
+  useEffect(() => {
+ console.log('props',props)
+  }, [])
   return (
-    <StyledHeading color={color} ref={itemRef}>
+    <StyledHeading color={color} ref={ref}>
       <div className={"heading"}>{text}</div>
     </StyledHeading>
   );
-};
+});
 
 export default Heading;
 

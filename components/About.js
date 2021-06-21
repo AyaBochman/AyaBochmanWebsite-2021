@@ -1,15 +1,15 @@
-import React from "react";
+import React, { forwardRef, useEffect } from "react";
 import styled from "styled-components";
 import Heading from "./commons/Heading";
 import { Flip } from "react-reveal";
 import CustomButton from "./commons/CustomButton";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faDownload, faUserAstronaut } from "@fortawesome/free-solid-svg-icons";
+import { faDownload } from "@fortawesome/free-solid-svg-icons";
 
-const About = ({ aboutRef }) => {
+const About = forwardRef((props, ref) => {
   return (
     <StyledAbout>
-      <Heading itemRef={aboutRef} text={"about"} />
+      <Heading ref={ref} text={"about"} />
       <img className={"aya-img"} src={"../../static/img/aya.png"} alt={"me"} />
       <h2 className={"intro"}>
         I’m a Front End &amp; Back End Developer from Israel.
@@ -33,7 +33,7 @@ const About = ({ aboutRef }) => {
       </Flip>
     </StyledAbout>
   );
-};
+});
 
 export default About;
 

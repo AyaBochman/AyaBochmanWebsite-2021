@@ -14,6 +14,12 @@ import { faMoon as farMoon } from "@fortawesome/free-regular-svg-icons";
 
 export default function Home() {
   const [darkMode, setDarkMode] = useState(false);
+  const refs = {
+    top: useRef(null),
+    about: useRef(null),
+    skills: useRef(null),
+    contact: useRef(null),
+  };
   const topRef = useRef(null);
   const aboutRef = useRef(null);
   const skillsRef = useRef(null);
@@ -30,11 +36,22 @@ export default function Home() {
           <link rel="icon" href="/laptop.ico" />
         </Head>
         <Header topRef={topRef} />
-        <Navbar aboutRef={aboutRef} skillsRef={skillsRef} contactRef={contactRef}/>
+        <Navbar
+          // aboutRef={aboutRef}
+          // skillsRef={skillsRef}
+          // contactRef={contactRef}
+          ref={refs}
+        />
         <button type="button" className={"dm-btn"} onClick={themeToggler}>
           <FontAwesomeIcon icon={darkMode ? farMoon : faMoon} />
         </button>
-        <Main topRef={topRef} aboutRef={aboutRef} skillsRef={skillsRef} contactRef={contactRef}/>
+        <Main
+        ref={refs}
+          // topRef={topRef}
+          // aboutRef={aboutRef}
+          // skillsRef={skillsRef}
+          // contactRef={contactRef}
+        />
         <Footer />
       </StyledHome>
     </ThemeProvider>

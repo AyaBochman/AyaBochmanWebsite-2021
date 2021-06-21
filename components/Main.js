@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from "react";
+import React, { useRef, useEffect, forwardRef } from "react";
 import styled from "styled-components";
 import About from "./About";
 import Skills from "./Skills";
@@ -8,27 +8,28 @@ import Fade from "react-reveal/Fade";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronUp } from "@fortawesome/free-solid-svg-icons";
 
-const Main = ({ topRef, aboutRef, skillsRef, contactRef }) => {
+const Main = forwardRef((props, refs) => {
+  const { about, skills, contact } = refs;
   const scrollTop = () => {
     topRef.current.scrollIntoView({ behavior: "smooth", block: "start" });
   };
   return (
     <StyledMain>
       <Fade big>
-        <About aboutRef={aboutRef} />
+        <About ref={about} />
       </Fade>
       <Fade big>
-        <Skills skillsRef={skillsRef} />
+        <Skills ref={skills} />
       </Fade>
 
-      <Contact contactRef={contactRef} />
+      <Contact ref={contact} />
       <Joke />
       <a className={"up-btn"} onClick={scrollTop}>
         <FontAwesomeIcon icon={faChevronUp} />
       </a>
     </StyledMain>
   );
-};
+});
 
 export default Main;
 

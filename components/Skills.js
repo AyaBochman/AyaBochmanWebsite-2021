@@ -1,4 +1,4 @@
-import React from "react";
+import React, { forwardRef } from "react";
 import styled from "styled-components";
 import Heading from "./commons/Heading";
 import SkillBar from "./commons/SkillBar";
@@ -31,7 +31,7 @@ const skills = [
   },
 ];
 
-const Skills = ({ skillsRef }) => {
+const Skills = forwardRef((props, ref) => {
   const calculateExp = () => {
     const args = [new Date(2019, 1, 9), new Date()];
     return formatDistance(...args);
@@ -39,7 +39,7 @@ const Skills = ({ skillsRef }) => {
 
   return (
     <StyledSkills>
-      <Heading itemRef={skillsRef} text={"skills"} />
+      <Heading ref={ref} text={"skills"} />
       <span className={"exp"}>
         <code>let myExp = {calculateExp()}</code>{" "}
       </span>
@@ -51,7 +51,7 @@ const Skills = ({ skillsRef }) => {
       </div>
     </StyledSkills>
   );
-};
+});
 
 export default Skills;
 
