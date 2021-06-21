@@ -1,28 +1,25 @@
 import React from "react";
 import styled from "styled-components";
 import Heading from "./commons/Heading";
-import { Flip, Fade } from "react-reveal";
-import Divider from "./commons/Divider";
+import { Flip } from "react-reveal";
 import CustomButton from "./commons/CustomButton";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faDownload, faUserAstronaut } from "@fortawesome/free-solid-svg-icons";
 
-const About = ({aboutRef}) => {
+const About = ({ aboutRef }) => {
   return (
     <StyledAbout>
-      <Heading itemRef={aboutRef} text={"about"} /> 
-      {/* <FontAwesomeIcon icon={faUserAstronaut} /> */}
+      <Heading itemRef={aboutRef} text={"about"} />
       <img className={"aya-img"} src={"../../static/img/aya.png"} alt={"me"} />
-      {/* <span className={"location"}>📍 Current Location: Belgrade, Serbia</span> */}
       <h2 className={"intro"}>
         I’m a Front End &amp; Back End Developer from Israel.
       </h2>
       <div className={"about-text"}>
-        My name is Aya Bochman, I came from the designing world and fell in love with the way code is
-        bringing everything to life. I’m currently specialized in React and
-        Node.js web applications, with SSR using Next.js. I love designing and
-        building web applications from scratch, for work and for fun, with
-        determination to create the best experience.
+        My name is Aya Bochman, I came from the designing world and fell in love
+        with the way code is bringing everything to life. I’m currently
+        specialized in React and Node.js web applications, with SSR using
+        Next.js. I love designing and building web applications from scratch,
+        for work and for fun, with determination to create the best experience.
       </div>
       <Flip bottom>
         <CustomButton
@@ -34,9 +31,6 @@ const About = ({aboutRef}) => {
           icon={<FontAwesomeIcon icon={faDownload} />}
         />
       </Flip>
-      {/* <Fade left>
-        <Divider />
-      </Fade> */}
     </StyledAbout>
   );
 };
@@ -63,7 +57,6 @@ const StyledAbout = styled.div`
   .about-text {
     line-height: 1.3;
     margin-bottom: 30px;
-    /* width: 600px; */
     margin: 0 auto 30px auto;
   }
   @media (min-width: 1024px) {

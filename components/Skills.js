@@ -3,8 +3,6 @@ import styled from "styled-components";
 import Heading from "./commons/Heading";
 import SkillBar from "./commons/SkillBar";
 import formatDistance from "date-fns/formatDistance";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCubes } from "@fortawesome/free-solid-svg-icons";
 
 const skills = [
   {
@@ -65,7 +63,6 @@ const StyledSkills = styled.div`
   box-shadow: 0 4px 6px -4px grey;
   .exp {
     margin: 0 auto 20px auto;
-    /* font-size: 16px; */
     color: var(--gradient-2);
   }
   .skills-container {

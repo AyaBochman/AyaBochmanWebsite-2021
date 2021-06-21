@@ -49,10 +49,10 @@ const StyledButton = styled.div`
     background-color: rgba(255, 255, 255, 0);
     transition: all 0.5s ease-in-out;
   }
-  .text{
-      margin-right: 5px;
+  .text {
+    margin-right: 5px;
   }
-  .icon{
+  .icon {
     height: 24px;
     width: 24px;
   }

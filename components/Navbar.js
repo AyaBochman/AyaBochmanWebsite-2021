@@ -3,7 +3,6 @@ import styled from "styled-components";
 import Fade from "react-reveal/Fade";
 
 const Navbar = ({ aboutRef, skillsRef, contactRef }) => {
-
   const scrollRef = (ref) => {
     ref.current.scrollIntoView({ behavior: "smooth", block: "start" });
   };
@@ -11,11 +10,7 @@ const Navbar = ({ aboutRef, skillsRef, contactRef }) => {
   return (
     <StyledNav>
       <Fade top>
-        <a
-          onClick={() => scrollRef(aboutRef)}
-          className={"link"}
-          href="#about"
-        >
+        <a onClick={() => scrollRef(aboutRef)} className={"link"} href="#about">
           About
         </a>
         <a

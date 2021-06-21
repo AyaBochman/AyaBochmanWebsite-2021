@@ -37,7 +37,6 @@ const StyledMain = styled.div`
   flex-direction: column;
   justify-content: center;
   font-size: 16px;
-  /* padding: 15px 49px; */
   font-family: "Raleway";
   color: var(--light-text);
   .up-btn {
@@ -51,5 +50,4 @@ const StyledMain = styled.div`
   @media (min-width: 1024px) {
     font-size: 18px;
   }
-
 `;

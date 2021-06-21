@@ -21,7 +21,6 @@ const Joke = () => {
 
   return (
     <JokeStyle>
-      {/* <button type="button">open me</button> */}
       {
         <div className={"joke"}>
           <div className={"joke-head"}>Geek joke of the day:</div>

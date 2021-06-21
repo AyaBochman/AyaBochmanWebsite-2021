@@ -6,7 +6,7 @@ const Header = ({ topRef }) => {
   return (
     <>
       <StyledBg ref={topRef} />
-    
+
       <StyledHeader>
         <div className={"head-text"}>
           <Slide left>
@@ -22,9 +22,6 @@ const Header = ({ topRef }) => {
             </div>
           </Slide>
         </div>
-
-        {/* <Slide left> */}
-        {/* </Slide> */}
       </StyledHeader>
     </>
   );
@@ -61,16 +58,14 @@ const StyledBg = styled.div`
 
 const StyledHeader = styled.div`
   color: #fff;
-  /* padding: 25px 40px; */
   font-family: "Roboto", sans-serif;
   font-weight: 100;
   height: auto;
   font-size: 48px;
-  /* background: linear-gradient(0deg, var(--gradient-2) 20%, var(--gradient-1) 70%); */
   position: absolute;
   top: 50px;
   left: calc(50% - 126px);
-  /* left: 15%; */
+
   .im-aya {
     font-weight: 500;
     margin-bottom: 20px;
@@ -90,7 +85,6 @@ const StyledHeader = styled.div`
     text-align: center;
     width: 250px;
     font-weight: 200;
-    /* margin: 15px; */
   }
 
   .head-text {
@@ -103,12 +97,5 @@ const StyledHeader = styled.div`
     align-items: center;
     flex-wrap: wrap;
     justify-content: center;
-  }
-
-  @media (min-width: 768px){
-    /* .fs{
-      font-size: 50px;
-      width: auto;
-    } */
   }
 `;
