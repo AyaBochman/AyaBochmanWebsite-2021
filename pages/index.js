@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Head from "next/head";
 import Header from "../components/Header";
 import Navbar from "../components/Navbar";
@@ -20,13 +20,34 @@ export default function Home() {
     skills: useRef(null),
     contact: useRef(null),
   };
-  const topRef = useRef(null);
-  const aboutRef = useRef(null);
-  const skillsRef = useRef(null);
-  const contactRef = useRef(null);
+
   const themeToggler = () => {
     setDarkMode(!darkMode);
   };
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      window.addEventListener("scroll", blaTry);
+    }
+  }, []);
+
+  const blaTry = () => {
+    const scrollY = window.pageYOffset;
+    Object.keys(refs).forEach((key) => {
+      if (key !== "top") {
+        const sectionHeight = refs[key].current.offsetHeight;
+        const sectionTop = refs[key].current.offsetTop - 200;
+        const sectionId = key;
+        let link = document.querySelector("a[href*=" + sectionId + "]");
+        if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+          link.classList.add("active");
+        } else {
+          link.classList.remove("active");
+        }
+      }
+    });
+  };
+
   return (
     <ThemeProvider theme={darkMode ? darkTheme : lightTheme}>
       <GlobalStyles />
@@ -35,23 +56,12 @@ export default function Home() {
           <title>Aya Bochman | Full Stack Web Developer</title>
           <link rel="icon" href="/laptop.ico" />
         </Head>
-        <Header topRef={topRef} />
-        <Navbar
-          // aboutRef={aboutRef}
-          // skillsRef={skillsRef}
-          // contactRef={contactRef}
-          ref={refs}
-        />
-        <button type="button" className={"dm-btn"} onClick={themeToggler}>
+        <Header ref={refs.top} />
+        <Navbar ref={refs} themeToggler={themeToggler} darkMode={darkMode}/>
+        {/* <button type="button" className={"dm-btn"} onClick={themeToggler}>
           <FontAwesomeIcon icon={darkMode ? farMoon : faMoon} />
-        </button>
-        <Main
-        ref={refs}
-          // topRef={topRef}
-          // aboutRef={aboutRef}
-          // skillsRef={skillsRef}
-          // contactRef={contactRef}
-        />
+        </button> */}
+        <Main ref={refs} />
         <Footer />
       </StyledHome>
     </ThemeProvider>
@@ -59,7 +69,7 @@ export default function Home() {
 }
 
 const StyledHome = styled.div`
-  .dm-btn {
+  /* .dm-btn {
     height: 40px;
     width: 40px;
     position: fixed;
@@ -71,5 +81,5 @@ const StyledHome = styled.div`
     cursor: pointer;
     box-shadow: 0 0 2px 1px grey;
     z-index: 1;
-  }
+  } */
 `;

@@ -1,11 +1,11 @@
-import React from "react";
+import React, { forwardRef } from "react";
 import styled from "styled-components";
 import Slide from "react-reveal/Slide";
 
-const Header = ({ topRef }) => {
+const Header = forwardRef((props, ref ) => {
   return (
     <>
-      <StyledBg ref={topRef} />
+      <StyledBg ref={ref} />
 
       <StyledHeader>
         <div className={"head-text"}>
@@ -25,7 +25,7 @@ const Header = ({ topRef }) => {
       </StyledHeader>
     </>
   );
-};
+});
 
 export default Header;
 

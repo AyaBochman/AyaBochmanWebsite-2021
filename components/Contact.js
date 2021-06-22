@@ -9,8 +9,8 @@ import { Slide, Flip, Fade } from "react-reveal";
 
 const Contact = forwardRef((props, ref) => {
   return (
-    <StyledContact>
-      <Heading ref={ref} text={"contact"} />
+    <StyledContact ref={ref}>
+      <Heading text={"contact"} />
       <Fade bottom>
         <div className={"contact-details"}>
           <div>Want us to work together? Send me a message!</div>
@@ -36,10 +36,6 @@ const Contact = forwardRef((props, ref) => {
           <a href="https://github.com/AyaBochman" target="_blank">
             <FontAwesomeIcon className={"contact-icon"} icon={faGithub} />
           </a>
-
-          <div className={"links-container"}>
-            <div></div>
-          </div>
         </div>
       </Fade>
     </StyledContact>

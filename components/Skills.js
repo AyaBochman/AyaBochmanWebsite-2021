@@ -38,10 +38,10 @@ const Skills = forwardRef((props, ref) => {
   };
 
   return (
-    <StyledSkills>
-      <Heading ref={ref} text={"skills"} />
+    <StyledSkills ref={ref}>
+      <Heading text={"skills"} />
       <span className={"exp"}>
-        <code>let myExp = {calculateExp()}</code>{" "}
+        <code>let myExp = {calculateExp()}</code>
       </span>
       <div className={"skills-container"}>
         {skills &&

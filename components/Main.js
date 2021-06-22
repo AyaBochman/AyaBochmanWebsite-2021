@@ -9,15 +9,17 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronUp } from "@fortawesome/free-solid-svg-icons";
 
 const Main = forwardRef((props, refs) => {
-  const { about, skills, contact } = refs;
+  const { about, skills, contact, top } = refs;
+
   const scrollTop = () => {
-    topRef.current.scrollIntoView({ behavior: "smooth", block: "start" });
+    top.current.scrollIntoView({ behavior: "smooth", block: "start" });
   };
   return (
     <StyledMain>
       <Fade big>
         <About ref={about} />
       </Fade>
+
       <Fade big>
         <Skills ref={skills} />
       </Fade>

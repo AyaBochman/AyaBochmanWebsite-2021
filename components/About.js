@@ -8,8 +8,8 @@ import { faDownload } from "@fortawesome/free-solid-svg-icons";
 
 const About = forwardRef((props, ref) => {
   return (
-    <StyledAbout>
-      <Heading ref={ref} text={"about"} />
+    <StyledAbout ref={ref}>
+      <Heading text={"about"} />
       <img className={"aya-img"} src={"../../static/img/aya.png"} alt={"me"} />
       <h2 className={"intro"}>
         I’m a Front End &amp; Back End Developer from Israel.
