@@ -1,4 +1,2 @@
-## Welcomne to my website
+## Welcome to my website
 This app was made with React + Next.js
-
-
