@@ -2,7 +2,7 @@ import React, { forwardRef } from "react";
 import styled from "styled-components";
 import Slide from "react-reveal/Slide";
 
-const Header = forwardRef((props, ref ) => {
+const Header = forwardRef((props, ref) => {
   return (
     <>
       <StyledBg ref={ref} />

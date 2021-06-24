@@ -8,9 +8,6 @@ import { faMoon as farMoon } from "@fortawesome/free-regular-svg-icons";
 
 const Navbar = forwardRef((props, refs) => {
   const { themeToggler, darkMode } = props;
-  useEffect(() => {
-    console.log("nav", refs);
-  }, []);
   const scrollRef = (name) => {
     refs[name].current.scrollIntoView({ behavior: "smooth", block: "start" });
   };
@@ -120,6 +117,8 @@ const StyledNav = styled.div`
   }
 
   a.home-btn {
+    display: flex;
+    align-items: center;
     &:active {
       color: var(--gradient-1);
     }
