@@ -9,10 +9,10 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronUp } from "@fortawesome/free-solid-svg-icons";
 
 const Main = forwardRef((props, refs) => {
-  const { about, skills, contact, top } = refs;
+  const { about, skills, contact, home } = refs;
 
   const scrollTop = () => {
-    top.current.scrollIntoView({ behavior: "smooth", block: "start" });
+    home.current.scrollIntoView({ behavior: "smooth", block: "start" });
   };
   return (
     <StyledMain>

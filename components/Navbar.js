@@ -17,37 +17,48 @@ const Navbar = forwardRef((props, refs) => {
 
   return (
     <StyledNav>
-      {/* <Fade top> */}
-      <div>
-        <a onClick={() => scrollRef("top")} href="#home" className={"home-btn"}>
-          <FontAwesomeIcon icon={faLaptopCode} className={"nav-icon"} />
-        </a>
-      </div>
-      <div>
-        <a onClick={() => scrollRef("about")} className={"link"} href="#about">
-          About
-        </a>
-        <a
-          onClick={() => scrollRef("skills")}
-          className={"link"}
-          href="#skills"
-        >
-          Skills
-        </a>
-        <a
-          onClick={() => scrollRef("contact")}
-          className={"link"}
-          href="#contact"
-        >
-          Contact
-        </a>
-      </div>
+      <Fade top>
+        <div>
+          <a
+            onClick={() => scrollRef("home")}
+            className={"link home-btn"}
+            href="#home"
+          >
+            <FontAwesomeIcon icon={faLaptopCode} className={"nav-icon"} />
+          </a>
+        </div>
+        <div>
+          <a
+            onClick={() => scrollRef("about")}
+            className={"link link-txt"}
+            href="#about"
+          >
+            About
+          </a>
+          <a
+            onClick={() => scrollRef("skills")}
+            className={"link link-txt"}
+            href="#skills"
+          >
+            Skills
+          </a>
+          <a
+            onClick={() => scrollRef("contact")}
+            className={"link link-txt"}
+            href="#contact"
+          >
+            Contact
+          </a>
+        </div>
 
-      <button type="button" className={"dm-btn"} onClick={themeToggler}>
-        {/* icon={darkMode ? farMoon : faMoon} */}
-        <FontAwesomeIcon icon={farMoon} className={"nav-icon"} icon={darkMode ? farMoon : faMoon}/>
-      </button>
-      {/* </Fade> */}
+        <button type="button" className={"dm-btn"} onClick={themeToggler}>
+          <FontAwesomeIcon
+            icon={farMoon}
+            className={"nav-icon moon"}
+            icon={darkMode ? farMoon : faMoon}
+          />
+        </button>
+      </Fade>
     </StyledNav>
   );
 });
@@ -62,7 +73,6 @@ const StyledNav = styled.div`
   justify-content: space-around;
   width: 100%;
   align-items: center;
-  /* padding: 0 25px; */
   position: -webkit-sticky;
   position: sticky;
   top: 0;
@@ -78,7 +88,7 @@ const StyledNav = styled.div`
     margin: 0 10px;
   }
 
-  a.link {
+  a.link-txt {
     &:hover,
     &:active {
       color: var(--gradient-1);
@@ -96,7 +106,9 @@ const StyledNav = styled.div`
       margin: 0 30px;
     }
   }
-
+  .moon {
+    color: var(--gradient-2);
+  }
   a.home-btn,
   button.dm-btn {
     border: none;
@@ -104,16 +116,19 @@ const StyledNav = styled.div`
     background: none;
     cursor: pointer;
     margin-top: 2px;
-    color: var(--gradient-2);
-    &:active,
-    &:hover,
-    &:focus {
+    transition: 0.1s ease-in-out;
+  }
+
+  a.home-btn {
+    &:active {
       color: var(--gradient-1);
     }
   }
 
   .nav-icon {
     height: 28px;
-    /* color: var(--gradient-2); */
+    &:hover {
+      color: var(--gradient-1);
+    }
   }
 `;

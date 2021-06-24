@@ -9,13 +9,13 @@ import { ThemeProvider } from "styled-components";
 import { GlobalStyles } from "../components/globalStyles";
 import { lightTheme, darkTheme } from "../components/Theme";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faMoon } from "@fortawesome/free-solid-svg-icons";
+import { faMoon, faSun } from "@fortawesome/free-solid-svg-icons";
 import { faMoon as farMoon } from "@fortawesome/free-regular-svg-icons";
 
 export default function Home() {
   const [darkMode, setDarkMode] = useState(false);
   const refs = {
-    top: useRef(null),
+    home: useRef(null),
     about: useRef(null),
     skills: useRef(null),
     contact: useRef(null),
@@ -34,16 +34,14 @@ export default function Home() {
   const blaTry = () => {
     const scrollY = window.pageYOffset;
     Object.keys(refs).forEach((key) => {
-      if (key !== "top") {
-        const sectionHeight = refs[key].current.offsetHeight;
-        const sectionTop = refs[key].current.offsetTop - 200;
-        const sectionId = key;
-        let link = document.querySelector("a[href*=" + sectionId + "]");
-        if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-          link.classList.add("active");
-        } else {
-          link.classList.remove("active");
-        }
+      const sectionHeight = refs[key].current.offsetHeight;
+      const sectionTop = refs[key].current.offsetTop - 200;
+      const sectionId = key;
+      let link = document.querySelector("a[href*=" + sectionId + "]");
+      if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+        link && link.classList.add("active");
+      } else {
+        link && link.classList.remove("active");
       }
     });
   };
@@ -56,11 +54,8 @@ export default function Home() {
           <title>Aya Bochman | Full Stack Web Developer</title>
           <link rel="icon" href="/laptop.ico" />
         </Head>
-        <Header ref={refs.top} />
-        <Navbar ref={refs} themeToggler={themeToggler} darkMode={darkMode}/>
-        {/* <button type="button" className={"dm-btn"} onClick={themeToggler}>
-          <FontAwesomeIcon icon={darkMode ? farMoon : faMoon} />
-        </button> */}
+        <Header ref={refs.home} />
+        <Navbar ref={refs} themeToggler={themeToggler} darkMode={darkMode} />
         <Main ref={refs} />
         <Footer />
       </StyledHome>
@@ -68,18 +63,4 @@ export default function Home() {
   );
 }
 
-const StyledHome = styled.div`
-  /* .dm-btn {
-    height: 40px;
-    width: 40px;
-    position: fixed;
-    bottom: 70px;
-    right: 50px;
-    border-radius: 50%;
-    border: none;
-    background: lightgray;
-    cursor: pointer;
-    box-shadow: 0 0 2px 1px grey;
-    z-index: 1;
-  } */
-`;
+const StyledHome = styled.div``;
