@@ -1,15 +1,15 @@
-import React, { forwardRef, useState } from "react";
-// import { isMobile } from "react-device-detect";
+import React, { forwardRef, useState, useRef } from "react";
 import styled from "styled-components";
 import Fade from "react-reveal/Fade";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLaptopCode } from "@fortawesome/free-solid-svg-icons";
-import { faMoon, faBars } from "@fortawesome/free-solid-svg-icons";
+import { faMoon, faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
 import { faMoon as farMoon } from "@fortawesome/free-regular-svg-icons";
 
 const Navbar = forwardRef((props, refs) => {
   const { themeToggler, darkMode, isMobile } = props;
   const [isOpen, setIsOpen] = useState(false);
+  const navBtnRef = useRef(null);
 
   const scrollRef = (name) => {
     refs[name].current.scrollIntoView({ behavior: "smooth", block: "start" });
@@ -17,13 +17,6 @@ const Navbar = forwardRef((props, refs) => {
 
   const handleOpen = () => {
     setIsOpen(!isOpen);
-  };
-
-  const hanleBlur = () => {
-    console.log("blur happens");
-    if (isOpen) {
-      setIsOpen(false);
-    }
   };
 
   const handleMobileClick = (name) => {
@@ -46,10 +39,10 @@ const Navbar = forwardRef((props, refs) => {
             <button
               type="button"
               className={"menu-btn"}
+              ref={navBtnRef}
               onClick={handleOpen}
-              // onBlur={hanleBlur}
             >
-              <FontAwesomeIcon icon={faBars} className={"nav-icon bars"} />
+              <FontAwesomeIcon icon={isOpen ? faTimes : faBars} className={"nav-icon bars"} />
             </button>
           </MobileNav>
           {isOpen ? (
@@ -145,6 +138,7 @@ const MobileMenu = styled.div`
   position: absolute;
   top: 60px;
   border-top: 2px solid var(--gradient-1);
+  transition: 0.3s ease-in-out;
   .mobile-links {
     display: flex;
     flex-direction: column;
