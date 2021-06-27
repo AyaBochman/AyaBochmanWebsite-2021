@@ -55,8 +55,7 @@ const StyledAbout = styled.div`
   }
   .about-text {
     line-height: 1.3;
-    margin-bottom: 30px;
-    margin: 0 auto;
+    margin: 0 auto 20px auto;
   }
   @media (min-width: 1024px) {
     padding: 40px 300px 40px 300px;

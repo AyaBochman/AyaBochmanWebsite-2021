@@ -5,6 +5,7 @@ import Skills from "./Skills";
 import Joke from "./Joke";
 import Contact from "./Contact";
 import Fade from "react-reveal/Fade";
+import Jump from "react-reveal/Jump";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronUp } from "@fortawesome/free-solid-svg-icons";
 
@@ -26,9 +27,11 @@ const Main = forwardRef((props, refs) => {
 
       <Contact ref={contact} />
       <Joke />
-      <a className={"up-btn"} onClick={scrollTop}>
-        <FontAwesomeIcon icon={faChevronUp} />
-      </a>
+      <Jump>
+        <a className={"up-btn"} onClick={scrollTop}>
+          <FontAwesomeIcon icon={faChevronUp} />
+        </a>
+      </Jump>
     </StyledMain>
   );
 });
