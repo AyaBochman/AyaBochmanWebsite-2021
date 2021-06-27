@@ -26,3 +26,9 @@ a {
   --light-text: #787878;
   --header-height: 360px;
 }
+
+:focus {
+  outline: 0;
+  outline-color: transparent;
+  outline-style: none;
+}
