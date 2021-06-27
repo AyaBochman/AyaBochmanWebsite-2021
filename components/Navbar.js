@@ -19,13 +19,20 @@ const Navbar = forwardRef((props, refs) => {
     setIsOpen(!isOpen);
   };
 
+  const hanleBlur = () => {
+    console.log("blur happens");
+    if (isOpen) {
+      setIsOpen(false);
+    }
+  };
+
   const handleMobileClick = (name) => {
     setIsOpen(false);
     scrollRef(name);
   };
 
   return (
-    <StyledNav>
+    <StyledNav isMobile={isMobile}>
       {isMobile ? (
         <>
           <MobileNav>
@@ -36,7 +43,12 @@ const Navbar = forwardRef((props, refs) => {
                 icon={darkMode ? farMoon : faMoon}
               />
             </button>
-            <button type="button" className={"menu-btn"} onClick={handleOpen}>
+            <button
+              type="button"
+              className={"menu-btn"}
+              onClick={handleOpen}
+              // onBlur={hanleBlur}
+            >
               <FontAwesomeIcon icon={faBars} className={"nav-icon bars"} />
             </button>
           </MobileNav>
@@ -137,13 +149,6 @@ const MobileMenu = styled.div`
     display: flex;
     flex-direction: column;
   }
-
-  a.link-txt {
-    &:hover,
-    &:active {
-      color: var(--gradient-1);
-    }
-  }
 `;
 
 const StyledNav = styled.div`
@@ -174,13 +179,15 @@ const StyledNav = styled.div`
     &:hover,
     &:active {
       color: var(--gradient-1);
-      border-bottom: 3px solid var(--gradient-1);
+      border-bottom: ${(props) =>
+        props.isMobile ? "none" : "3px solid var(--gradient-1)"};
     }
   }
 
   .active {
     color: var(--gradient-1);
-    border-bottom: 3px solid var(--gradient-1);
+    border-bottom: ${(props) =>
+      props.isMobile ? "none" : "3px solid var(--gradient-1)"};
   }
 
   @media (min-width: 768px) {
