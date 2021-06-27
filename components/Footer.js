@@ -5,15 +5,15 @@ const Footer = () => {
   return (
     <StyledFooter>
       <span className={"footer"}>
-        &copy; This
+        &copy; This&nbsp; 
         <a
           className={"web-link"}
           href="https://github.com/AyaBochman/AyaBochmanWebsite"
           target="_blank"
         >
-          website
+          website&nbsp; 
         </a>
-        was coded &amp; designed 100% by Aya Bochman {new Date().getFullYear()}
+         was coded &amp; designed 100% by Aya Bochman {new Date().getFullYear()}
       </span>
     </StyledFooter>
   );
