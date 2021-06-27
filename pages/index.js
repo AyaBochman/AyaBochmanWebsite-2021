@@ -8,12 +8,12 @@ import styled from "styled-components";
 import { ThemeProvider } from "styled-components";
 import { GlobalStyles } from "../components/globalStyles";
 import { lightTheme, darkTheme } from "../components/Theme";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faMoon, faSun } from "@fortawesome/free-solid-svg-icons";
-import { faMoon as farMoon } from "@fortawesome/free-regular-svg-icons";
+import useMediaQuery from "@material-ui/core/useMediaQuery";
 
 export default function Home() {
   const [darkMode, setDarkMode] = useState(false);
+  const isMobile = useMediaQuery("(max-width:500px)");
+
   const refs = {
     home: useRef(null),
     about: useRef(null),
@@ -27,11 +27,11 @@ export default function Home() {
 
   useEffect(() => {
     if (typeof window !== "undefined") {
-      window.addEventListener("scroll", blaTry);
+      window.addEventListener("scroll", handleScroll);
     }
   }, []);
 
-  const blaTry = () => {
+  const handleScroll = () => {
     const scrollY = window.pageYOffset;
     Object.keys(refs).forEach((key) => {
       const sectionHeight = refs[key].current.offsetHeight;
@@ -55,7 +55,7 @@ export default function Home() {
           <link rel="icon" href="/laptop.ico" />
         </Head>
         <Header ref={refs.home} />
-        <Navbar ref={refs} themeToggler={themeToggler} darkMode={darkMode} />
+        <Navbar ref={refs} themeToggler={themeToggler} darkMode={darkMode} isMobile={isMobile} />
         <Main ref={refs} />
         <Footer />
       </StyledHome>
