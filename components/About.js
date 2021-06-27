@@ -43,7 +43,6 @@ const StyledAbout = styled.div`
   flex-direction: column;
   padding: 30px 40px 40px 40px;
   box-shadow: 0 4px 6px -4px grey;
-  /* text-align: center; */
   .aya-img {
     width: 220px;
     height: auto;
@@ -52,7 +51,7 @@ const StyledAbout = styled.div`
   .intro {
     text-align: center;
     font-weight: 400;
-    color: var(--gradient-2);
+    color: ${({ theme }) => theme.secondaryColor};
   }
   .about-text {
     line-height: 1.3;

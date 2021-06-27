@@ -63,7 +63,7 @@ const StyledSkills = styled.div`
   box-shadow: 0 4px 6px -4px grey;
   .exp {
     margin: 0 auto 20px auto;
-    color: var(--gradient-2);
+    color: ${({ theme }) => theme.secondaryColor};
   }
   .skills-container {
     width: 250px;

@@ -74,11 +74,11 @@ const StyledNav = styled.div`
   position: sticky;
   top: 0;
   z-index: 1;
-  background-color: var(--light-bg);
+  background-color: ${({ theme }) => theme.navBackground};
   a {
     text-transform: uppercase;
     font-size: 20px;
-    color: var(--gradient-2);
+    color: ${({ theme }) => theme.secondaryColor};
     font-weight: 300;
     padding: 0.25rem 0;
     transition: 0.1s ease-in-out;
@@ -104,7 +104,7 @@ const StyledNav = styled.div`
     }
   }
   .moon {
-    color: var(--gradient-2);
+    color: ${({ theme }) => theme.secondaryColor};
   }
   a.home-btn,
   button.dm-btn {
