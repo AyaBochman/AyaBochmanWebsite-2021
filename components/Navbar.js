@@ -42,7 +42,10 @@ const Navbar = forwardRef((props, refs) => {
               ref={navBtnRef}
               onClick={handleOpen}
             >
-              <FontAwesomeIcon icon={isOpen ? faTimes : faBars} className={"nav-icon bars"} />
+              <FontAwesomeIcon
+                icon={isOpen ? faTimes : faBars}
+                className={"nav-icon bars"}
+              />
             </button>
           </MobileNav>
           {isOpen ? (
