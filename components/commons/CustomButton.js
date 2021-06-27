@@ -1,13 +1,20 @@
 import React from "react";
 import styled from "styled-components";
 
-const CustomButton = ({ text, icon }) => {
+const CustomButton = ({ text, icon, isDownload = false, path }) => {
   return (
     <StyledButton>
-      <button type="button" className={"send-btn"}>
-        <span className={"text"}>{text}</span>
-        <span className={"icon"}>{icon && icon}</span>
-      </button>
+      {isDownload ? (
+        <a className={"send-btn"} href={path} download>
+          <span className={"text"}>{text}</span>
+          <span className={"icon"}>{icon && icon}</span>
+        </a>
+      ) : (
+        <button type="button" className={"send-btn"}>
+          <span className={"text"}>{text}</span>
+          <span className={"icon"}>{icon && icon}</span>
+        </button>
+      )}
     </StyledButton>
   );
 };
@@ -15,7 +22,9 @@ const CustomButton = ({ text, icon }) => {
 export default CustomButton;
 
 const StyledButton = styled.div`
+  display: flex;
   .send-btn {
+    font-family: "Raleway";
     position: relative;
     text-transform: uppercase;
     font-size: 18px;

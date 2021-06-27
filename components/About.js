@@ -23,11 +23,9 @@ const About = forwardRef((props, ref) => {
       </div>
       <Flip bottom>
         <CustomButton
-          text={
-            <a href="../../static/files/Aya-Bochman-CV.pdf" download>
-              Download CV
-            </a>
-          }
+          isDownload={true}
+          text={"Download CV"}
+          path={"../../static/files/Aya-Bochman-CV.pdf"}
           icon={<FontAwesomeIcon icon={faDownload} />}
         />
       </Flip>
