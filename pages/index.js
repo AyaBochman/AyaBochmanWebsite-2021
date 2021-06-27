@@ -55,7 +55,12 @@ export default function Home() {
           <link rel="icon" href="/laptop.ico" />
         </Head>
         <Header ref={refs.home} />
-        <Navbar ref={refs} themeToggler={themeToggler} darkMode={darkMode} isMobile={isMobile} />
+        <Navbar
+          ref={refs}
+          themeToggler={themeToggler}
+          darkMode={darkMode}
+          isMobile={isMobile}
+        />
         <Main ref={refs} />
         <Footer />
       </StyledHome>
@@ -63,4 +68,6 @@ export default function Home() {
   );
 }
 
-const StyledHome = styled.div``;
+const StyledHome = styled.div`
+  min-width: 100%;
+`;
