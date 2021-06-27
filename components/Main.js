@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, forwardRef } from "react";
+import React, { forwardRef } from "react";
 import styled from "styled-components";
 import About from "./About";
 import Skills from "./Skills";

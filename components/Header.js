@@ -36,7 +36,6 @@ const StyledBg = styled.div`
   background-size: cover;
   position: relative;
   background-position: center;
-  /* border-bottom: 3px solid var(--gradient-1); */
   ::after {
     content: "";
     position: absolute;

@@ -41,7 +41,7 @@ const StyledAbout = styled.div`
   display: flex;
   justify-content: center;
   flex-direction: column;
-  padding: 30px 40px 40px 40px;
+  padding: 30px 30px 40px 30px;
   box-shadow: 0 4px 6px -4px grey;
   .aya-img {
     width: 220px;
@@ -56,7 +56,7 @@ const StyledAbout = styled.div`
   .about-text {
     line-height: 1.3;
     margin-bottom: 30px;
-    margin: 0 auto 30px auto;
+    margin: 0 auto;
   }
   @media (min-width: 1024px) {
     padding: 40px 300px 40px 300px;
