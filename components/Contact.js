@@ -29,7 +29,7 @@ const Contact = forwardRef((props, ref) => {
               }
             />
           </Flip>
-          <div>And find me here:</div>
+          <div className={"find-me"}>And find me here:</div>
           <a href="https://www.linkedin.com/in/aya-bochman/" target="_blank">
             <FontAwesomeIcon className={"contact-icon"} icon={faLinkedin} />
           </a>
@@ -62,5 +62,8 @@ const StyledContact = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+  .find-me {
+    margin-bottom: 10px;
   }
 `;
