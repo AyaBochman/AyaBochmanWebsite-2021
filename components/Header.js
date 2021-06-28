@@ -9,18 +9,18 @@ const Header = forwardRef((props, ref) => {
 
       <StyledHeader>
         <div className={"head-text"}>
-          <Slide left>
+          {/* <Slide left> */}
             <div>Hello World!</div>
-          </Slide>
-          <Slide left>
+          {/* </Slide> */}
+          {/* <Slide left> */}
             <span className={"im-aya"}>I'M AYA.</span>
-          </Slide>
-          <Slide right>
+          {/* </Slide> */}
+          {/* <Slide right> */}
             <div className={"fs"}>
               <span className={"b-tag"}>&lt;b&gt;</span>Full Stack Web Developer
               <span className={"b-tag"}>&lt;/b&gt;</span>
             </div>
-          </Slide>
+          {/* </Slide> */}
         </div>
       </StyledHeader>
     </>
