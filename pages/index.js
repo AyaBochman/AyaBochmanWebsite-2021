@@ -49,25 +49,19 @@ export default function Home() {
   return (
     <ThemeProvider theme={darkMode ? darkTheme : lightTheme}>
       <GlobalStyles />
-      <StyledHome>
-        <Head>
-          <title>Aya Bochman | Full Stack Web Developer</title>
-          <link rel="icon" href="/laptop.ico" />
-        </Head>
-        <Header ref={refs.home} />
-        <Navbar
-          ref={refs}
-          themeToggler={themeToggler}
-          darkMode={darkMode}
-          isMobile={isMobile}
-        />
-        <Main ref={refs} />
-        <Footer />
-      </StyledHome>
+      <Head>
+        <title>Aya Bochman | Full Stack Web Developer</title>
+        <link rel="icon" href="/laptop.ico" />
+      </Head>
+      <Header ref={refs.home} />
+      <Navbar
+        ref={refs}
+        themeToggler={themeToggler}
+        darkMode={darkMode}
+        isMobile={isMobile}
+      />
+      <Main ref={refs} />
+      <Footer />
     </ThemeProvider>
   );
 }
-
-const StyledHome = styled.div`
-  min-width: 100%;
-`;
